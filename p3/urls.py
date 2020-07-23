@@ -27,6 +27,6 @@ urlpatterns = [
     path('fifth/',views.fifth,name="fifth"),
     path("url_data/<name>",views.url_data,name="url_data"),
     path("ab/<a>/<b>",views.ab,name="ab"),
-    path('url_ovel/<s>', views.url_ovel, name='url_ovel'),
+    path('ovel/<s>', views.ovel, name='ovel'),
 
 ]

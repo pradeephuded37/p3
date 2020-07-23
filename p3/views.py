@@ -27,7 +27,7 @@ def ab(request,a,b):
     sum=int(a)+int(b)
     return HttpResponse(str(sum))
 
-def url_ovel(request, s):
+def ovel(request, s):
     ovels = 'aeiouAEIOU'
     o = 0
     cnsnt = 0
