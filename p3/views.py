@@ -11,7 +11,7 @@ def second(request):
     return render(request,"directory/second.html")
 
 def third(request):
-    return render(request,"directory/third.html",context={'data':pradeep,'name':deep})
+    return render(request,"directory/third.html",{'data':'pradeep','name':'deep'})
 
 def fourth(request):
     fruits=['apple','mango','banana','kiwi','orange']
@@ -20,22 +20,24 @@ def fourth(request):
 def fifth(request):
     return render(request,"directory/fifth.html",{'a':10,'b':5})
 
-def urls_data(request,name):
+def url_data(request,name):
     return HttpResponse("<h1>{}</h1>".format(name))
 
 def ab(request,a,b):
     sum=int(a)+int(b)
     return HttpResponse(str(sum))
 
-def vowels(request, s):
-    vowels = 'aeiouAEIOU'
-    vowel = 0
-    consonant = 0
+def url_ovel(request, s):
+    ovels = 'aeiouAEIOU'
+    o = 0
+    cnsnt = 0
     for i in s:
-        if i in vowels:
+        if i in ovels:
             o += 1
         else:
-            consonant += 1
-    return render(request, 'directry/vowels.html', {'string':s, 'vowel':vowel, 'consonant':consonant})
+            cnsnt += 1
+    return render(request, 'directory/ovel.html', {'string':s, 'ov':o, 'cons':cnsnt})
+
+
 
 

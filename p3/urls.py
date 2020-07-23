@@ -25,9 +25,8 @@ urlpatterns = [
     path('third/',views.third,name='third'),
     path('fourth/',views.fourth,name="fourth"),
     path('fifth/',views.fifth,name="fifth"),
-    path("url_data/name<name>",views.urls_data,name="urls_data"),
+    path("url_data/<name>",views.url_data,name="url_data"),
     path("ab/<a>/<b>",views.ab,name="ab"),
-    path('vowels/<s>', views.vowels, name='vowels'),
-    
+    path('url_ovel/<s>', views.url_ovel, name='url_ovel'),
 
 ]
